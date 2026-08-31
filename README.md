@@ -1,2 +1,73 @@
-# All-Types-of-Linked-Lists
-A Python project that implements multiple linked list types, including singly, doubly, circular, and circular doubly linked lists. It includes common operations like append, prepend, insert, remove, pop, search, and get, with clear comments and time-complexity notes for learning and reference.
+# Linked Lists
+
+A Python implementation of multiple linked list types, including:
+
+- Singly linked list with tail
+- Singly linked list without tail
+- Doubly linked list
+- Circular linked list
+- Circular doubly linked list
+
+This project is designed as a learning and reference implementation for common linked list operations.
+
+## Features
+
+Each list supports core operations such as:
+
+- append
+- prepend
+- insert
+- remove
+- pop
+- search
+- get
+- display
+- length checking
+- empty-state checks
+
+## File
+
+- `allLinkedLists.py` – contains all linked list classes and demo usage
+
+## Usage
+
+```python
+from allLinkedLists import SinglyLinkedList, DoublyLinkedList, CircularLinkedList
+
+sll = SinglyLinkedList()
+sll.append(10)
+sll.append(20)
+sll.prepend(5)
+
+print(sll)      # displays the list
+print(len(sll)) # prints 3
+print(20 in sll) # True
+
+# Doubly linked list example
+ dll = DoublyLinkedList()
+ dll.append(1)
+ dll.append(2)
+ print(dll)
+```
+
+## Example output
+
+```python
+Tail<->1<->2<->3<->Head
+```
+
+## Notes
+
+- This repository focuses on understanding linked list behavior and pointer management.
+- Each method includes comments explaining its purpose and time complexity.
+- The file also includes a small demonstration section that runs when executed directly.
+
+## Run locally
+
+```bash
+python3 allLinkedLists.py
+```
+
+## License
+
+This project is provided for educational purposes.

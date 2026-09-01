@@ -68,6 +68,10 @@ Tail<->1<->2<->3<->Head
 python3 allLinkedLists.py
 ```
 
+## Contributing
+
+Contributions are welcome! Feel free to submit issues and pull requests.
+
 ## Author
 
 Ismail - [@Imismail18](https://github.com/Imismail18)

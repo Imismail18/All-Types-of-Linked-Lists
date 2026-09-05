@@ -40,6 +40,7 @@ Each list supports core operations such as:
 - `is_empty()`: O(1)
 - `__contains__`: O(n)
 - `__repr__`: O(n)
+- `__iter__`: O(n)
   
 ## File
 

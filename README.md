@@ -88,9 +88,9 @@ python3 allLinkedLists.py
 ## Project Structure
 
 ```text
-Stack/
-├── allLinkedLists.py
-├── README.md
+📂 LinkedLists/
+├── 📄 allLinkedLists.py
+├── 📄 README.md
 ```
 
 ## Contributing

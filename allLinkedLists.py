@@ -45,14 +45,11 @@ class SinglyLinkedList(LinkedLists):
     #Loops throgh items of the linked list
     #Time complexity: O(n)
     def __iter__(self):
-        items = []
-
         curr = self.head
         while curr is not None:
-            items.append(str(curr.data))
+            yield curr.data
             curr = curr.next
 
-        return items
 
     #Returns a string representation of the linked list showing all elements from head to tail.
     #Time complexity: O(n), where n is the number of elements in the list.
@@ -243,14 +240,11 @@ class SinglyLinkedListWithoutTail(LinkedLists):
     #Loops throgh items of the linked list
     #Time complexity: O(n)
     def __iter__(self):
-        items = []
-
         curr = self.head
         while curr is not None:
-            items.append(str(curr.data))
+            yield curr.data
             curr = curr.next
 
-        return items
 
     #Returns a string representation of the linked list showing all elements from head to end.
     #Time complexity: O(n), where n is the number of elements in the list.
@@ -421,14 +415,11 @@ class DoublyLinkedList(LinkedLists):
     #Loops throgh items of the linked list
         #Time complexity: O(n)
     def __iter__(self):
-        items = []
-
         curr = self.head
         while curr is not None:
-            items.append(str(curr.data))
+            yield curr.data
             curr = curr.next
 
-        return items
 
     #Returns a string representation of the doubly linked list from head to tail.
     #Time complexity: O(n), where n is the number of elements in the list.
@@ -611,14 +602,11 @@ class CircularLinkedList(LinkedLists):
     #Loops throgh items of the linked list
     #Time complexity: O(n)
     def __iter__(self):
-        items = []
-
         curr = self.head
-        while curr is not None:
-            items.append(str(curr.data))
+        for _ in range(self.size):
+            yield curr.data
             curr = curr.next
 
-        return items
 
     #Returns a string representation of the circular linked list.
     #Time complexity: O(n), where n is the number of elements in the list.
@@ -819,14 +807,11 @@ class CircularDoublyLinkedList(LinkedLists):
     #Loops throgh items of the linked list
     #Time complexity: O(n)
     def __iter__(self):
-        items = []
-
         curr = self.head
-        while curr is not None:
-            items.append(str(curr.data))
+        for _ in range(self.size):
+            yield curr.data
             curr = curr.next
 
-        return items
 
     #Returns a string representation of the circular doubly linked list.
     #Time complexity O(n)

@@ -24,7 +24,23 @@ Each list supports core operations such as:
 - display
 - length checking
 - empty-state checks
+- looping throgh items
 
+## Time Complexity
+
+- `append()`: O(1)
+- `prepend()`: O(1)
+- `insert()`: O(n)
+- `remove()`: O(n)
+- `pop()`: O(n)
+- `search()`: O(n)
+- `get()`: O(n)
+- `display()`: O(n)
+- `__len__()`: O(1)
+- `is_empty()`: O(1)
+- `__contains__`: O(n)
+- `__repr__`: O(n)
+  
 ## File
 
 - `allLinkedLists.py` – contains all linked list classes and demo usage
@@ -66,6 +82,14 @@ Tail<->1<->2<->3<->Head
 
 ```bash
 python3 allLinkedLists.py
+```
+
+## Project Structure
+
+```text
+Stack/
+├── allLinkedLists.py
+├── README.md
 ```
 
 ## Contributing

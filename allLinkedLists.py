@@ -40,8 +40,19 @@ class SinglyLinkedList(LinkedLists):
 
     #Returns the number of elements currently in the linked list.
     #Time complexity: O(1)
-    def __len__(self):
-        return self.size
+    def __len__(self): return self.size
+
+    #Loops throgh items of the linked list
+    #Time complexity: O(n)
+    def __iter__(self):
+        items = []
+
+        curr = self.head
+        while curr is not None:
+            items.append(str(curr.data))
+            curr = curr.next
+
+        return items
 
     #Returns a string representation of the linked list showing all elements from head to tail.
     #Time complexity: O(n), where n is the number of elements in the list.
@@ -54,6 +65,7 @@ class SinglyLinkedList(LinkedLists):
             items.append(str(curr.data))
             curr = curr.next
         items.append("None")
+
         return "->".join(items)
 
     #Checks if an item exists in the linked list. Raises ValueError if list is empty.
@@ -65,6 +77,7 @@ class SinglyLinkedList(LinkedLists):
         while curr is not None:
             if curr.data == item: return True
             curr = curr.next
+
         return False
 
     #Adds an element to the end of the linked list.
@@ -129,6 +142,7 @@ class SinglyLinkedList(LinkedLists):
 
             if self.head is None: self.tail = None
             self.size -= 1
+
             return
 
         curr = self.head
@@ -137,7 +151,9 @@ class SinglyLinkedList(LinkedLists):
                 if curr.next == self.tail: self.tail = curr
                 curr.next = curr.next.next
                 self.size -= 1
+
                 return
+            
             curr = curr.next
 
     #Removes and returns the element at the specified index, or the last element if no index is provided.
@@ -155,6 +171,7 @@ class SinglyLinkedList(LinkedLists):
 
             if self.head is None: self.tail = None
             self.size -= 1
+
             return popped_value
 
         curr = self.head
@@ -169,6 +186,7 @@ class SinglyLinkedList(LinkedLists):
 
         curr.next = curr.next.next
         self.size -= 1
+
         return popped_value
 
     #Searches for a value in the linked list.
@@ -208,8 +226,7 @@ class SinglyLinkedList(LinkedLists):
 
     #Checks if the linked list is empty. Returns True if empty, False otherwise.
     #Time complexity: O(1)
-    def is_empty(self):
-        return self.head is None and self.tail is None
+    def is_empty(self): return self.head is None and self.tail is None
 
 
 #Singly Linked List without Tail - Simple implementation with head pointer only.
@@ -221,8 +238,19 @@ class SinglyLinkedListWithoutTail(LinkedLists):
 
     #Returns the number of elements currently in the linked list.
     #Time complexity: O(1)
-    def __len__(self):
-        return self.size
+    def __len__(self): return self.size
+
+    #Loops throgh items of the linked list
+    #Time complexity: O(n)
+    def __iter__(self):
+        items = []
+
+        curr = self.head
+        while curr is not None:
+            items.append(str(curr.data))
+            curr = curr.next
+
+        return items
 
     #Returns a string representation of the linked list showing all elements from head to end.
     #Time complexity: O(n), where n is the number of elements in the list.
@@ -376,8 +404,7 @@ class SinglyLinkedListWithoutTail(LinkedLists):
 
     #Checks if the linked list is empty. Returns True if empty, False otherwise.
     #Time complexity: O(1)
-    def is_empty(self):
-        return self.head is None
+    def is_empty(self): return self.head is None
 
 
 class DoublyLinkedList(LinkedLists):
@@ -389,8 +416,19 @@ class DoublyLinkedList(LinkedLists):
 
     #Returns the number of elements currently in the doubly linked list.
     #Time complexity: O(1)
-    def __len__(self):
-        return self.size
+    def __len__(self): return self.size
+
+    #Loops throgh items of the linked list
+        #Time complexity: O(n)
+    def __iter__(self):
+        items = []
+
+        curr = self.head
+        while curr is not None:
+            items.append(str(curr.data))
+            curr = curr.next
+
+        return items
 
     #Returns a string representation of the doubly linked list from head to tail.
     #Time complexity: O(n), where n is the number of elements in the list.
@@ -538,8 +576,7 @@ class DoublyLinkedList(LinkedLists):
         if index < 0 or index >= self.size: raise ValueError("Index out of range!")
 
         curr = self.head
-        for _ in range(index):
-            curr = curr.next
+        for _ in range(index): curr = curr.next
         return curr.data
 
     #Prints all elements in the doubly linked list from head to tail.
@@ -556,8 +593,7 @@ class DoublyLinkedList(LinkedLists):
 
     #Checks if the doubly linked list is empty. Returns True if empty, False otherwise.
     #Time complexity: O(1)
-    def is_empty(self):
-        return self.head is None and self.tail is None
+    def is_empty(self): return self.head is None and self.tail is None
 
 
 class CircularLinkedList(LinkedLists):
@@ -571,6 +607,18 @@ class CircularLinkedList(LinkedLists):
     #Time complexity: O(1)
     def __len__(self):
         return self.size
+
+    #Loops throgh items of the linked list
+    #Time complexity: O(n)
+    def __iter__(self):
+        items = []
+
+        curr = self.head
+        while curr is not None:
+            items.append(str(curr.data))
+            curr = curr.next
+
+        return items
 
     #Returns a string representation of the circular linked list.
     #Time complexity: O(n), where n is the number of elements in the list.
@@ -753,8 +801,7 @@ class CircularLinkedList(LinkedLists):
 
     #Checks if the circular linked list is empty. Returns True if empty, False otherwise.
     #Time complexity: O(1)
-    def is_empty(self):
-        return self.head is None and self.tail is None
+    def is_empty(self): return self.head is None and self.tail is None
 
 
 class CircularDoublyLinkedList(LinkedLists):
@@ -768,6 +815,18 @@ class CircularDoublyLinkedList(LinkedLists):
     #Time complexity O(1)
     def __len__(self):
         return self.size
+
+    #Loops throgh items of the linked list
+    #Time complexity: O(n)
+    def __iter__(self):
+        items = []
+
+        curr = self.head
+        while curr is not None:
+            items.append(str(curr.data))
+            curr = curr.next
+
+        return items
 
     #Returns a string representation of the circular doubly linked list.
     #Time complexity O(n)
@@ -938,8 +997,7 @@ class CircularDoublyLinkedList(LinkedLists):
         if index < 0 or index >= self.size: raise ValueError("Index out of range!")
         
         curr = self.head
-        for _ in range(index):
-            curr = curr.next
+        for _ in range(index): curr = curr.next
         return curr.data
         
     #Prints all elements in the circular doubly linked list.
@@ -958,13 +1016,13 @@ class CircularDoublyLinkedList(LinkedLists):
 
     #Checks if the circular doubly linked list is empty.
     #Time complexity O(1)
-    def is_empty(self):
-        return self.head is None and self.tail is None
+    def is_empty(self): return self.head is None and self.tail is None
 
     
 if __name__ == "__main__":
     print()
     print("==" * 30, "\nSingly Linked List with Tail:\nBeginning:\n", "__" * 30)
+
     SLL_tail = SinglyLinkedList()
     SLL_tail.append(10)
     SLL_tail.append(11)
@@ -988,10 +1046,14 @@ if __name__ == "__main__":
 
     print(90 in SLL_tail)
     print(SLL_tail)
+
+    for i in SLL_tail: print(i)
+
     print("==" * 30, "\nSingly Linked List with Tail - End\n")
 
     print()
     print("==" * 30, "\nSingly Linked List without Tail:\nBeginning:\n", "__" * 30)
+
     SLL_no_tail = SinglyLinkedListWithoutTail()
     SLL_no_tail.append(10)
     SLL_no_tail.append(11)
@@ -1017,10 +1079,14 @@ if __name__ == "__main__":
     print(90 in SLL_no_tail)
     print(SLL_no_tail)
     print(len(SLL_no_tail))
+
+    for i in SLL_no_tail: print(i)
+
     print("==" * 30, "\nSingly Linked List without Tail - End\n")
 
     print()
     print("==" * 30, "\nDoubly Linked List:\nBeginning:\n", "__" * 30)
+
     DLL = DoublyLinkedList()
     DLL.append(10)
     DLL.append(11)
@@ -1044,10 +1110,14 @@ if __name__ == "__main__":
     print(90 in DLL)
     print(DLL)
     print(len(DLL))
+
+    for i in DLL: print(i)
+
     print("==" * 30, "\nDoubly Linked List - End\n")
 
     print()
     print("==" * 30, "\nCircular Linked List:\nBeginning:\n", "__" * 30)
+
     CLL = CircularLinkedList()
     CLL.append(10)
     CLL.append(11)
@@ -1073,10 +1143,14 @@ if __name__ == "__main__":
     print(90 in CLL)
     print(CLL)
     print(len(CLL))
+
+    for i in CLL: print(i)
+
     print("==" * 30, "\nCircular Linked List - End\n")
 
 
     print("==" * 30, "\nCirculy Doubly Linked List:\nBeginning:\n", "__" * 30)
+
     CDLL = CircularDoublyLinkedList()
 
     CDLL.append(10)
@@ -1103,6 +1177,8 @@ if __name__ == "__main__":
     print(90 in CDLL)
     print(CDLL)
     print(len(CDLL))
+
+    for i in CDLL: print(i)
 
     print("==" * 30, "\nCirculy Doubly Linked List - End\n")
     print()
